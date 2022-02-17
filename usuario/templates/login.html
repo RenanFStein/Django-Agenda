@@ -8,6 +8,13 @@
 </head>
 <body>
     <h1>Você esta na pagina de login</h1>
+
+    <form method="POST" action="{% url 'salvar'%}">{% csrf_token %}
+        <input type="text" placeholder="nome" name="nome">
+        <input type="text" placeholder="sobrenome" name="sobrenome">
+        <input type="number" placeholder="idade" name="idade">
+        <input type="submit">
+    </form>
     
 </body>
 </html>
